@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 
 class Restaurant(models.Model):
-    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4)
     rating = models.SmallIntegerField()
     name = models.CharField(max_length=128, blank=False)
     site = models.URLField()

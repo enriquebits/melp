@@ -5,7 +5,7 @@ from django.core.management.base import BaseCommand
 
 
 class Command(BaseCommand):
-    help = 'Closes the specified poll for voting'
+    help = 'Load data into Restaurant model from a given csv file'
 
     def add_arguments(self, parser):
         parser.add_argument('path', type=str)
