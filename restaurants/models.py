@@ -1,5 +1,7 @@
 import uuid
-from django.db import models
+from django.contrib.gis.db import models
+from django.contrib.gis.geos import Point
+
 
 # Create your models here.
 
@@ -13,6 +15,7 @@ class Restaurant(models.Model):
     street = models.CharField(max_length=128, blank=True, default='')
     city = models.CharField(max_length=128, blank=True, default='')
     state = models.CharField(max_length=128, blank=True, default='')
+    location = models.PointField(geography=True, default=Point(0.0, 0.0))
     lat = models.FloatField()
     lng = models.FloatField()
 

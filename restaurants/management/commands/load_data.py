@@ -1,5 +1,6 @@
 import csv
 from restaurants.models import Restaurant
+from django.contrib.gis.geos import Point
 from django.core.management.base import BaseCommand
 
 
@@ -15,7 +16,7 @@ class Command(BaseCommand):
         with open(options['path']) as f:
             reader = csv.DictReader(f)
             for row in reader:
-                _, created = Restaurant.objects.get_or_create(
+                restaurant, created = Restaurant.objects.get_or_create(
                     id=row['id'],
                     rating=row['rating'],
                     name=row['name'],
@@ -28,6 +29,8 @@ class Command(BaseCommand):
                     lat=row['lat'],
                     lng=row['lng']
                 )
+                restaurant.location = Point(float(row['lng']), float(row['lat']))
+                restaurant.save()
                 # creates a tuple of the new object or
                 # current object and a boolean of if it was created
 
