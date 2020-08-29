@@ -24,10 +24,19 @@ This endpoint returns a JSON with the following data:
    std: Standard deviation of rating of restaurants inside the circle
 }`
 
+
+## Installation
+
+Using python 3.7.9
+
+`pip install -r requirements.txt`
+
 ## Run app
 
-`cd melp`
+Configure database in `settings.py`, then run the following command: 
 
 `python manage.py migrate`
 
 `python manage.py runserver`
+
+
