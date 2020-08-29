@@ -24,3 +24,10 @@ This endpoint returns a JSON with the following data:
    std: Standard deviation of rating of restaurants inside the circle
 }`
 
+## Run app
+
+`cd melp`
+
+`python manage.py migrate`
+
+`python manage.py runserver`
