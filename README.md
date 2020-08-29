@@ -1,5 +1,5 @@
 # melp
-Provide useful information about restaurants to users
+Django app that provide useful information about restaurants to users
 
 ## Load dummy data 
 
