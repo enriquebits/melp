@@ -29,7 +29,7 @@ SECRET_KEY = 'nt9hf$#4hs-c+4oesec&uillc$yxal4=qh!d2xn5($qhj7lk!a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['shrouded-hamlet-39622.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
